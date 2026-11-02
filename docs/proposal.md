@@ -63,17 +63,56 @@ Tests mock the LLM.
   drives the app, an evaluation set for the plan generator, and later,
   scheduled reminder emails for upcoming tasks.
 
-## Idea 2: TBD
+## Idea 2: Yale RideShare
 
-**Tagline:**
+**Tagline:** a ride board for Yale students sharing trips between New Haven and
+New York, especially to and from the airports.
 
 ### Major user journeys
 
+- **As a rider,** I log in with my Yale email and enter where I'm leaving from,
+  where I'm going, and the date. I get a list of matching trips. Each one shows
+  the departure time, seats left (or how many co-riders the poster wants),
+  whether it's an Uber, a rental, or the poster's own car, the make and model if
+  it's their car, and the price per person. I pick one and message the poster to
+  sort out pickup.
+- **As a trip organizer,** I log in and post my trip: start, destination, date
+  and time, how I'm going (my car, a rental, or an Uber I want to split), car
+  details if it's mine, number of seats, and price per seat. Riders find my trip
+  in search and message me. I mark seats as filled when people confirm, and the
+  trip comes off the board once it's full or has left.
+- **As a confirmed rider,** I pay my share in the app with a credit card, debit
+  card, PayPal, or bank account.
+- **As a student flying out of JFK with no plan yet,** I enter where I am and
+  where I need to end up. The app tells me the best way to get there using the
+  rides posted right now, for example a seat in a car going to Manhattan that
+  afternoon plus how to cover the last stretch.
+- **As someone who makes the same trip often,** I save my usual route (say, Yale
+  to LaGuardia) and get an email each morning with the trips posted for it.
+
 ### Core features (MVP)
 
-**What we'd skip:**
+1. **Trip posting and search:** post a trip, and search by start, destination,
+   and date.
+2. **Messaging:** inbox-style messages between a rider and the trip poster.
+3. **Payments:** riders pay their share by credit card, debit card, PayPal, or
+   bank account.
+4. **Car rental search:** for organizers who want to rent, show rental options
+   for their date and pickup location.
+5. **AI trip planner and daily digest** (below).
+
+**What we'd skip:** cryptocurrency payments, driver ratings and reviews, live
+GPS tracking, and a native mobile app.
 
 ### AI feature
+
+- **Trip planner:** the user enters a starting point and final destination. The
+  app sends the LLM the trips currently posted that could help (matching or
+  nearby endpoints, close departure times), and the LLM writes back a short
+  recommendation: which ride to join and how to handle any leg the posted rides
+  don't cover.
+- **Daily digest:** each morning, for users with a saved route, the LLM turns
+  that day's matching trips into a short email listing what's available.
 
 ## Idea 3: TBD
 
