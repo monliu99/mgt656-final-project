@@ -114,14 +114,35 @@ GPS tracking, and a native mobile app.
 - **Daily digest:** each morning, for users with a saved route, the LLM turns
   that day's matching trips into a short email listing what's available.
 
-## Idea 3: TBD
+## Idea 3: Travel AIgent
 
-**Tagline:**
+**Tagline:** an AI-powered travel agent that creates personalized itineraries
+and books your entire trip, excluding flights.
 
 ### Major user journeys
 
+- **As a traveler,** I enter my destination, dates, budget, and interests. I
+  receive a personalized itinerary, review suggested hotels and activities, and
+  confirm bookings.
+- **As a traveler,** I modify my itinerary, swap activities, or adjust my
+  budget, and the agent updates my trip accordingly.
+- **As an admin,** I manage hotel and activity listings, monitor bookings, and
+  resolve booking issues.
+
 ### Core features (MVP)
 
-**What we'd skip:**
+1. **Profiles:** user profiles and trip preference collection.
+2. **Itinerary planning:** itinerary creation and day-by-day trip planning.
+3. **Hotel and activity search:** listings with pricing and availability.
+4. **Bookings:** booking confirmation and centralized trip management.
+5. **Editing and budget:** itinerary editing and budget tracking.
+
+**What we'd skip:** flight bookings, complex payment processing, multi-user
+collaboration, and a native mobile app.
 
 ### AI feature
+
+An LLM-powered travel agent that generates personalized itineraries based on
+user preferences, budget, and destination. It recommends relevant hotels and
+activities, optimizes the itinerary by location and timing, and adapts plans
+based on user feedback.
