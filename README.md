@@ -7,6 +7,7 @@ Team repo for the MGT 656 Software Development final project.
 - pinnockdeidra-lab
 - donpedro98
 - mlaboriel18-cyber
+- code-ragnar
 
 ## Getting Started
 Clone the repo and create a feature branch for your work:
