@@ -1,0 +1,23 @@
+# Render Blueprint for staging. DATABASE_URL points at a Neon Postgres database
+# and is set in the Render dashboard (never committed).
+services:
+  - type: web
+    name: nameless-wind-staging
+    runtime: python
+    plan: free
+    buildCommand: ./build.sh
+    preDeployCommand: uv run python manage.py migrate --noinput && uv run python manage.py seed
+    startCommand: uv run gunicorn config.wsgi --bind 0.0.0.0:$PORT --log-file -
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: SEED_ADMIN_PASSWORD
+        sync: false
+      - key: SEED_COUPLE1_PASSWORD
+        sync: false
+      - key: SEED_COUPLE2_PASSWORD
+        sync: false
