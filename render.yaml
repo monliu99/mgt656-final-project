@@ -6,8 +6,8 @@ services:
     runtime: python
     plan: free
     buildCommand: ./build.sh
-    preDeployCommand: uv run python manage.py migrate --noinput && uv run python manage.py seed
-    startCommand: uv run gunicorn config.wsgi --bind 0.0.0.0:$PORT --log-file -
+    # Free tier has no pre-deploy hook, so migrate and seed run at startup (both are safe to repeat).
+    startCommand: .venv/bin/python manage.py migrate --noinput && .venv/bin/python manage.py seed && .venv/bin/gunicorn config.wsgi --bind 0.0.0.0:$PORT --log-file -
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.8
