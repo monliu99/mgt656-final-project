@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>I Do List</h1>
+<p class="lead">An AI wedding planner for couples planning without a human one.</p>
+{% if user.is_authenticated %}
+  <p>Welcome back, {{ user.username }}. Your plan will appear here.</p>
+{% else %}
+  <p><a href="{% url 'signup' %}">Create an account</a> to get started.</p>
+{% endif %}
+{% endblock %}

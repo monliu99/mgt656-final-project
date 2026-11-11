@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Say something nice{% endblock %}
+{% block content %}
+<h1>Team nameless-wind</h1>
+<ul>{% for m in members %}<li>{{ m }}</li>{% endfor %}</ul>
+<form method="post" action="{{ click_url }}">{% csrf_token %}
+  <button id="abtest" type="submit" class="btn btn-primary btn-lg">{{ variant }}</button>
+</form>
+{% endblock %}

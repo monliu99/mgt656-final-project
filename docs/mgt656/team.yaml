@@ -1,0 +1,13 @@
+framework: django
+database: postgres
+members:
+  - nickname: joyous-jackal
+    github: code-ragnar
+  - nickname: clear-squid
+    github: pinnockdeidra-lab
+  - nickname: excited-tiger
+    github: mlaboriel18-cyber
+  - nickname: enthusiastic-grasshopper
+    github: donpedro98
+  - nickname: smoggy-owl
+    github: monliu99
